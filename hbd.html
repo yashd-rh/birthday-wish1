@@ -1,0 +1,36 @@
+<!-- hbd.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      text-align: center;
+      background: #ffe5ec;
+      font-family: 'Comic Sans MS', cursive;
+    }
+    .cake {
+      font-size: 100px;
+      margin-top: 50px;
+    }
+    .message {
+      font-size: 40px;
+      color: #d63384;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cake">🎂</div>
+  <div class="message" id="birthdayMessage">Happy Birthday!</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    if (name) {
+      document.getElementById("birthdayMessage").textContent = `🎉 Happy Birthday ${name}! 🎉`;
+    }
+  </script>
+</body>
+</html>
